@@ -3,17 +3,85 @@ header {
     h1 {font-size: 2rem;}
 }
 
-.parent {
-    grid-template-columns: 1fr 1fr;
-  }
+nav button {
+    display: none;
+}
 
 nav {
-
+background-color: $menuColor;
+list-style-type: none;
     ul {
         display: flex;
-    } // end ul
+        margin-left: 2%;
+        border-left: 1px solid rgba(0,0,0,0.1);
+        list-style-type: none;
+       
+    }
+    
+    ul li {
+        border-right: 1px solid rgba(0,0,0,0.1);
+    }// end ul
     ul li a {
-        border: none;
+       display: block;
+       font-size: 1rem;
+       padding: .9rem 1.2rem;
+       color: white;
+       text-decoration: none;
+       transition: background 0.3s linear;
+    }
+    ul li a:hover {
+        background-color: rgba(0,0,0,0.5);
     }
 
+    #primaryNav li.parent > a:after {
+        content: "\25BC";
+        font-size: .65rem;
+        color: white;
+        float: left;
+    }
+
+    ul li ul {
+        display: flex;
+        flex-direction: column;
+        background-color: darken($menuColor, 5%);
+        border: none;
+        width: 14rem;
+        position: absolute;
+        left: -999rem;
+        z-index: 99;
+    }// end child
+
+
+    ul li ul li {
+        border-right: none;
+        border-top: solid 1px rgba(0,0,0,0.2);
+        
+    }
+
+ul li:hover ul {
+    left: auto;
+    margin-left: 0;
+}
+
+li.active a {
+    background-color: rgba(0,0,0,.25);
+}
+
 } // end nav
+
+.customer {
+     section {
+        display: grid;
+        grid-template-columns: 140px auto;
+      padding: 10px;
+      column-gap: 4px;
+      p {
+        color: black;
+      }
+     }// end section
+    }// end customer
+
+    .mask {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }

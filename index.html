@@ -13,6 +13,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
 <link href="css/styles.min.css" rel="stylesheet">
+<link
+  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 <!--Fav Icon Stuff-->
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -26,25 +28,113 @@
     
 <div id="headerWrapper">
     <header>
-        <img src="favicon_io-arch/architecture.logo.png" alt="logo" width="75" height="75">
-        <h1 class="gradient-text">Big Architect Services</h1>
+        <a href="#"><img src="architecture.logo-assets/logo1x.png" alt="favicon" width="50" height="50" srcset="architecture.logo-assets/logo1x.png 1x, architecture.logo-assets/logo2x.png 2x, architecture.logo-assets/logo3x.png 3x"></a>
+        <h1 class="gradient-text">Landscapes Landscape Services</h1>
     </header>
 </div>
 
 
 <div id="navWrapper">
     <nav>
-       <ul>
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
+        <button id="hamburgerBtn">&#9776;</button>
+       <ul id="primaryNav">
+        <li class="parent"><a href="#">Home</a>
+        <ul>
+            <li><a href="#">Tour</a></li>
+            <li><a href="#">VR</a></li>
+            <li><a href="#">Fun</a></li>
+        </ul>
+        </li>
+        <li class="parent"><a href="#">Prices</a>
+            <ul>
+                <li><a href="#">Payout</a></li>
+                <li class="active"><a href="#">Discounts</a></li>
+                <li><a href="#">Bribes</a></li>
+            </ul>
+        </li>
+
         <li><a href="#">Contact</a></li>
+       
+
        </ul>
     </nav>
 </div>
 
 <div id="mainWrapper">
 <main>
-    <h1>Inventory</h1>
+
+    <!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+
+      <div class="swiper-slide">
+        <picture>
+            <source srcset="landscape_media/landscape3_small.webp" media="(max-width: 400px)">
+            <source srcset="landscape_media/landscape3_medium.webp" media="(max-width: 800px)">
+        <img src="landscape_media/landscape3_large.webp" alt="slider A" width="16" height="8">
+    </picture></div>
+      <div class="swiper-slide">
+        <picture>
+            <source srcset="landscape_media/landscape2_small.webp" media="(max-width: 400px)">
+            <source srcset="landscape_media/landscape2_medium.webp" media="(max-width: 800px)">
+            <img src="landscape_media/landscape2_small.webp" alt="slider B" width="16" height="8">
+        </picture></div>
+      <div class="swiper-slide">
+        <picture>
+            <source srcset="landscape_media/landscape1_small.webp" media="(max-width: 400px)">
+            <source srcset="landscape_media/landscape1_medium.webp" media="(max-width: 800px)">
+            <img src="landscape_media/landscape1_small.webp" alt="slider C" width="16" height="8">
+        </picture></div>
+     
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+  </div>
+  <h1>That's What People Be Saying</h1>
+  <div class="customer">
+    <section>
+        <img src="landscape_media/person1.jpeg" width="200" height="200" alt="person 1">
+        <p>Landscapes Landscape Services are the okayest Landscaping Service that exists on the Western Hempisphere. All I can say is that I like that Landscape Landscape Services is the Okayest Landscaping Service because while they are the okayest Landscaping Service, at least they are not the worst of the worst Landscaping Service.
+        </p>
+    </section>
+
+    <section>
+        <img src="landscape_media/person2.webp" width="200" height="200" alt="person 2">
+        <p>Landscapes Landscape Services are the okayest Landscaping Service that exists on the Western Hempisphere. All I can say is that I like that Landscape Landscape Services is the Okayest Landscaping Service because while they are the okayest Landscaping Service, at least they are not the worst of the worst Landscaping Service.
+        </p>
+    </section>
+  </div>
+
+  <h1>Some of Our Houses</h1>
+  <div class="mask">
+    <section>
+        <h2>Wind</h2>
+        <img src="landscape_media/arch_1.webp" width="400" height="250" alt="arch 1">
+        <img src="landscape_media/cloud.png" width="400" height="104" alt="mask 1">
+    </section>
+
+    <section>
+        <h2>Fire</h2>
+        <img src="landscape_media/arch_2.webp" width="400" height="250" alt="arch 2">
+        <img src="landscape_media/river.png" width="400" height="74" alt="mask 2">
+    </section>
+
+    <section>
+        <h2>Water</h2>
+        <img src="landscape_media/arch_3.webp" width="400" height="250" alt="arch 2">
+        <img src="landscape_media/flow.svg" width="400" height="100" alt="mask 3">
+    </section>
+
+    <section>
+        <h2>Earth</h2>
+        <img src="landscape_media/arch_4.webp" width="400" height="250" alt="arch 2">
+        <img src="landscape_media/rigid.svg" width="400" height="100" alt="mask 4">
+    </section>
+
+  </div>
     
 </main>
 </div>
@@ -57,6 +147,7 @@
 
 
 </div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>
